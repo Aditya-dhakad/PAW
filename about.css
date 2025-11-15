@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+
+
+body,html{
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
+        'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+body {
+    margin: 0;
+    /* font-family: "Nunito", sans-serif; */
+    background: #f2f2f2;
+}
+
+.team-header {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 35px 0 45px;
+    position: relative;
+}
+
+.team-header h1 {
+    font-size: 22px;
+    letter-spacing: 3px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+
+
+
+.team-wrapper {
+    width: 100%;
+    background: white;
+}
+
+/* SECTION DESIGN */
+.team-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 90px;
+    background: linear-gradient(to bottom, #f5fdfd, #e8e8e8);
+}
+
+/* Alternating layout */
+.team-section.left-img {
+    flex-direction: row;
+}
+.team-section.right-img {
+    flex-direction: row-reverse;
+}
+
+.team-photo {
+    width: 330px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 50px;
+}
+.adi-photo {
+    width: 400px;
+    height: 480px;
+    object-fit: cover;
+    margin-right: 50px;
+    
+} 
+
+
+
+.team-section.right-img .team-photo {
+    margin-right: 0;
+    margin-left: 50px;
+ 
+}
+
+.team-info h2 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.team-info h3 {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: #d9534f; /* red text like screenshot */
+    margin-bottom: 18px;
+}
+
+.team-info p {
+    font-size: 15px;
+    max-width: 550px;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* ----------- Tablet + Mobile (max-width: 900px) ----------- */
+@media (max-width: 900px) {
+
+    .team-section {
+        flex-direction: column !important;
+        text-align: center;
+        padding: 40px 30px;
+    }
+
+    .team-photo,
+    .adi-photo {
+        width: 80%;
+        max-width: 320px;
+        margin: 0 0 25px 0 !important;
+    }
+
+    .team-info h2 {
+        font-size: 24px;
+    }
+
+    .team-info h3 {
+        font-size: 13px;
+    }
+
+    .team-info p {
+        font-size: 14px;
+        max-width: 100%;
+    }
+}
+
+/* ----------- Small Mobile (max-width: 500px) ----------- */
+@media (max-width: 500px) {
+
+    .team-section {
+        padding: 30px 20px;
+    }
+
+    .team-photo,
+    .adi-photo {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .team-info h2 {
+        font-size: 20px;
+    }
+
+    .team-info h3 {
+        font-size: 12px;
+    }
+
+    .team-info p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
+

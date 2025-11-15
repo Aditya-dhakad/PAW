@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate • Paw Rescue Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="donation.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT SIDE -->
+    <div class="left-box">
+        <img src="images/dontate2.png" class="donation-logo" alt="Donation Logo">
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right-box">
+        <div class="content">
+
+    <h1 class="title">Support Our Rescue</h1>
+    <p class="subtitle">Your donation helps save more animals.</p>
+
+    <div id="formBox">
+        <div class="input-box">
+            <span>Full Name</span>
+            <input type="text" placeholder="Enter your name">
+        </div>
+
+        <div class="input-box">
+            <span>Email</span>
+            <input type="email" placeholder="Enter your email">
+        </div>
+
+        <div class="input-box">
+            <span>Donation Amount</span>
+            <input type="number" placeholder="₹500">
+        </div>
+
+        <div class="input-box">
+            <span>Message (optional)</span>
+            <textarea placeholder="Write a message..."></textarea>
+        </div>
+
+        <button class="donate-btn" type="button" onclick="showThankYou()">
+            Donate Now
+        </button>
+    </div>
+
+    <!-- Hidden thank-you message -->
+    <div id="thankyouBox" style="display: none; text-align:center;">
+        <h1 class="title">Thank You!</h1>
+        <p class="subtitle">Your donation is greatly appreciated.</p>
+    </div>
+
+</div>
+
+<script>
+function showThankYou() {
+    document.getElementById("formBox").style.display = "none";
+    document.getElementById("thankyouBox").style.display = "block";
+}
+</script>

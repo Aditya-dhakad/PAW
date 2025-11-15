@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+body,
+html {
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
+        'Droid Sans', 'Helvetica Neue', sans-serif;
+
+    background: white;
+    /* overflow: hidden; */
+}
+
+.signup-wrapper {
+    display: flex;
+    width: 95vw;
+    height: 120vh;
+    overflow: hidden;
+}
+
+/* LEFT PANEL */
+.left-panel {
+    width: 50%;
+    background: #09345F;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.paw-bg-left svg {
+    position: absolute;
+    top: -80px;
+    left: -80px;
+    width: 260px;
+    height: 260px;
+    opacity: 0.10;
+    fill: white;
+    transform: rotate(-20deg);
+}
+
+.left-logo {
+    width: 380px;
+    z-index: 10;
+}
+
+.left-logo svg {
+    width: 80%;
+    height: auto;
+    fill: white;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+    width: 50%;
+    padding: 80px 140px;
+    position: relative;
+}
+
+/* TITLES */
+.title {
+    font-size: 38px;
+    font-weight: 800;
+    color: #12C8FF;
+}
+
+.subtitle {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.45;
+    color: #0A2F5A;
+    max-width: 520px;
+}
+
+/* WARNING BOX */
+.warning-box {
+    background: #FFECEC;
+    color: #7A1F1F;
+    margin-top: 25px;
+    padding: 20px 22px;
+    border-radius: 20px;
+    width: 520px;
+    font-size: 15px;
+    line-height: 1.55;
+}
+
+/* FORM */
+.form-area {
+    margin-top: 35px;
+}
+
+.input {
+    width: 520px;
+    height: 55px;
+    background: #F4F7FC;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 0 20px;
+    font-size: 16px;
+    margin-bottom: 22px;
+}
+
+.input:focus {
+    border: 2px solid #12C8FF;
+}
+
+.agree {
+    font-size: 15px;
+    margin-top: 8px;
+    color: #0A2F5A;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 520px;
+    line-height: 1.4;
+}
+
+.agree input {
+    width: 18px;
+    height: 18px;
+}
+
+.agree a {
+    color: #0A66C2;
+    text-decoration: underline;
+}
+
+/* BUTTON */
+.signup-btn {
+    margin-top: 35px;
+    padding: 15px 55px;
+    background: #09345F;
+    color: white;
+    border-radius: 20px;
+    border: 2px solid #09345F;
+    cursor: pointer;
+    font-size: 18px;
+    width: 200px;
+}
+
+/* BOTTOM PAW */
+.paw-bg-right svg {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 230px;
+    height: 230px;
+    opacity: 0.12;
+    fill: rgb(146, 165, 206);
+    transform: rotate(20deg);
+    z-index: 1;
+}
+
+
+/* -------------------- TABLET (max-width: 992px) -------------------- */
+@media (max-width: 992px) {
+
+    .signup-wrapper {
+        flex-direction: column;
+        height: auto;
+        width: 100vw;
+    }
+
+    .left-panel {
+        width: 100%;
+        height: 260px;
+        padding: 20px 0;
+    }
+
+    .left-logo {
+        width: 260px;
+    }
+
+    .right-panel {
+        width: 100%;
+        padding: 50px 50px;
+    }
+
+    .warning-box,
+    .input,
+    .agree {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+/* -------------------- MOBILE (max-width: 600px) -------------------- */
+@media (max-width: 600px) {
+
+    body, html {
+        overflow-y: auto;
+    }
+
+    .signup-wrapper {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .left-panel {
+        width: 100%;
+        height: 200px;
+        padding: 10px 0;
+    }
+
+    .left-logo {
+        width: 200px;
+    }
+
+    .right-panel {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+        width: 100%;
+    }
+
+    .warning-box {
+        font-size: 14px;
+        width: 100%;
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .input {
+        width: 100%;
+        height: 50px;
+        font-size: 15px;
+        border-radius: 15px;
+    }
+
+    .agree {
+        width: 100%;
+        font-size: 14px;
+        gap: 6px;
+    }
+
+    .agree input {
+        width: 16px;
+        height: 16px;
+    }
+
+    .signup-btn {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+        margin-top: 25px;
+        border-radius: 16px;
+    }
+
+    .paw-bg-right svg {
+        width: 150px;
+        height: 150px;
+        bottom: -10px;
+        right: -10px;
+    }
+}

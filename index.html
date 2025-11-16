@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAW - Pet Adoption Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="favicon.ico">
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="mobileMenu" class="mobile-menu">
+    <div class="menu-header">
+        <i class="fa-solid fa-arrow-left" onclick="toggleMenu()"></i>
+    </div>
+
+    <ul class="menu-links">
+        <li onclick="window.location.href='about.html'">About Us</li>
+        <li>Adopt Animals</li>
+        <li Donate onclick="window.location.href='donate.html'">Donate</li>
+        <li onclick="window.location.href='login.html'">Rescue Login</li>
+    </ul>
+</div>
+
+    <!-- <header> -->
+    <nav>
+        <div class="nav-container">
+            <img src="images/paw logo.jpg" alt="" class="logo">
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+
+            <div class="nav-items">
+                <ul>
+                    <li onclick="window.location.href='about.html'">About Us</li>
+                    <li>Adopt</li>
+                    <li onclick="window.location.href='donation.html'">Donate</li>
+                </ul>
+
+                <a href="login.html">
+                    <button>Rescue login</button>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <section class="choose">
+        <div class="buttons">
+
+            <div class="select-box">
+                <div class="head-dog">Species</div>
+                <select value="">
+                    <!-- <option value=""></option> -->
+                    <option value="dog">Dog </option>
+
+                    <option value="cat">Cat</option>
+
+                    <option value="rabbit">Rabbit</option>
+
+                </select>
+            </div>
+
+            <div class="select-box">
+                <div class="head-dog">Breed</div>
+                <select>
+                    <option value=""></option>
+
+
+                    <option>Unkown / Mixture</option>
+                    <option>Greyhound</option>
+                    <option>Akita</option>
+                    <option>Siberian husky</option>
+                    <option>German shephard</option>
+                    <option>Beagle</option>
+                    <option>Labrador</option>
+                    <option>Golden retriever</option>
+                    <option>Bull dog </option>
+
+                </select>
+            </div>
+
+            <div class="select-box">
+                <div class="head-dog">Color</div>
+                <select>
+                    <option></option>
+
+                    <option>Color</option>
+                    <option>Black</option>
+                    <option>Brown</option>
+                    <option>Blonde</option>
+                    <option>Grey</option>
+                    <option>Ginger</option>
+                    <option>Red</option>
+                    <option>White</option>
+                    <option>Torti</option>
+                    <option>Other</option>
+
+                </select>
+
+                <button type="button" onclick="location.reload()" class="reset">Reset</button>
+                <button class="search">Search</button>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="main-content">
+        <div class="mainbox">
+            <div class="filterbox">
+                <div class="sizebox">
+                    <div class="head-txt">Size</div>
+                    <div class="b">
+                        <select name="size" id="">
+                            <option></option>
+                            <option value="Dog">Tiny</option>
+                            <option value="Cat">Small</option>
+                            <option value="rabit">Medium</option>
+                            <option value="equine">Large</option>
+                            <option value="others">Very Large</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="main-age">
+                    <div class="head-txt">Sex</div>
+                    <div class="b">
+                        <select name="age" id="">
+                            <option></option>
+                            <option value="Dog">Female</option>
+                            <option value="Cat">Male</option>
+                            <option value="rabit">Unkown</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="age-range">
+                    <div class="head-txt">Age Range</div>
+                    <div class="age-container">
+                        <div class="age-from">
+                            <input type="text">
+                            <div class="from-yrs">yrs</div>
+                        </div>
+
+                        <span>&nbsp;to &nbsp;</span>
+
+                        <div class="age-from">
+                            <input type="text">
+                            <div class="from-yrs">yrs</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="head-txt">Age of youngest child in home</div>
+                <div class="age-young">
+                    <input type="text">
+                    <div class="young-yrs">yrs</div>
+                </div>
+
+                <div class="head-txt">Location</div>
+                <div class="location">
+                    <input type="text">
+                    <div class="current">Use Current</div>
+                </div>
+
+                <div class="distance-box">
+                    <div class="distance">Distance (miles)</div>
+                    <select class="distance-select">
+                        <option value=""></option>
+                        <option value="Dog">20 miles</option>
+                        <option value="Dog">50 miles</option>
+                        <option value="Dog">100 miles</option>
+                        <option value="Dog">150 miles</option>
+                        <option value="Dog">200 miles</option>
+                    </select>
+                </div>
+
+                <div class="check check1">
+                    <label for="good">
+                        <input type="checkbox">
+                        <div>Good with Dogs</div>
+                    </label>
+                </div>
+                <div class="check check2">
+                    <label for="good">
+                        <input type="checkbox">
+                        <div>Good with Cats</div>
+                    </label>
+                </div>
+
+                <div class="filter-reset">
+                    <button type="button" onclick="location.reload()">Reset</button>
+                </div>
+
+                <div class="filter-search">
+                    <button>Search</button>
+                </div>
+            </div>
+
+            <div class="content">
+
+                <div class="dog-card">
+
+                    <div class="dog-image">
+                        <img src="images/dog1.png" alt="">
+                    </div>
+
+                    <div class="info-row">
+
+                        <img src="images/logo1.jpg" class="dog-logo">
+
+                        <div class="info-text">
+                            <div class="dog-name">Marko</div>
+                            <div class="dog-age">8 months old</div>
+
+                            <div class="dog-location">
+                                <svg viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M6.64579 4.81306C6.64579 4.17998 6.13281 3.66699 5.50019 3.66699C4.86711 3.66699 4.35413 4.17998 4.35413 4.81306C4.35413 5.44568 4.86711 5.95866 5.50019 5.95866C6.13281 5.95866 6.64579 5.44568 6.64579 4.81306Z" />
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M5.49978 9.625C4.95047 9.625 2.0625 7.28676 2.0625 4.84151C2.0625 2.92721 3.60117 1.375 5.49978 1.375C7.39838 1.375 8.9375 2.92721 8.9375 4.84151C8.9375 7.28676 6.04908 9.625 5.49978 9.625Z" />
+                                </svg>
+                                <span>Vijay nagar</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="dog-card">
+
+                    <div class="dog-image">
+                        <img src="images/dog2.png" alt="">
+                    </div>
+
+                    <div class="info-row">
+
+                        <img src="images/logo2.jpg" class="dog-logo">
+
+                        <div class="info-text">
+                            <div class="dog-name">Ellie</div>
+                            <div class="dog-age">3 years old</div>
+
+                            <div class="dog-location">
+                                <svg viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M6.64579 4.81306C6.64579 4.17998 6.13281 3.66699 5.50019 3.66699C4.86711 3.66699 4.35413 4.17998 4.35413 4.81306C4.35413 5.44568 4.86711 5.95866 5.50019 5.95866C6.13281 5.95866 6.64579 5.44568 6.64579 4.81306Z" />
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M5.49978 9.625C4.95047 9.625 2.0625 7.28676 2.0625 4.84151C2.0625 2.92721 3.60117 1.375 5.49978 1.375C7.39838 1.375 8.9375 2.92721 8.9375 4.84151C8.9375 7.28676 6.04908 9.625 5.49978 9.625Z" />
+                                </svg>
+                                <span>Mahalaxmi Nagar</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="dog-card">
+
+                    <div class="dog-image">
+                        <img src="images/dog3.png" alt="">
+                    </div>
+
+                    <div class="info-row">
+
+                        <img src="images/logo3.jpg" class="dog-logo">
+
+                        <div class="info-text">
+                            <div class="dog-name">Laila</div>
+                            <div class="dog-age">8 years old</div>
+
+                            <div class="dog-location">
+                                <svg viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M6.64579 4.81306C6.64579 4.17998 6.13281 3.66699 5.50019 3.66699C4.86711 3.66699 4.35413 4.17998 4.35413 4.81306C4.35413 5.44568 4.86711 5.95866 5.50019 5.95866C6.13281 5.95866 6.64579 5.44568 6.64579 4.81306Z" />
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M5.49978 9.625C4.95047 9.625 2.0625 7.28676 2.0625 4.84151C2.0625 2.92721 3.60117 1.375 5.49978 1.375C7.39838 1.375 8.9375 2.92721 8.9375 4.84151C8.9375 7.28676 6.04908 9.625 5.49978 9.625Z" />
+                                </svg>
+                                <span>Aurbindo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="dog-card">
+
+                    <div class="dog-image">
+                        <img src="images/dog4.png" alt="">
+                    </div>
+
+                    <div class="info-row">
+
+                        <img src="images/logo4.jpg" class="dog-logo">
+
+                        <div class="info-text">
+                            <div class="dog-name">Misty</div>
+                            <div class="dog-age">1 year old</div>
+
+                            <div class="dog-location">
+                                <svg viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M6.64579 4.81306C6.64579 4.17998 6.13281 3.66699 5.50019 3.66699C4.86711 3.66699 4.35413 4.17998 4.35413 4.81306C4.35413 5.44568 4.86711 5.95866 5.50019 5.95866C6.13281 5.95866 6.64579 5.44568 6.64579 4.81306Z" />
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M5.49978 9.625C4.95047 9.625 2.0625 7.28676 2.0625 4.84151C2.0625 2.92721 3.60117 1.375 5.49978 1.375C7.39838 1.375 8.9375 2.92721 8.9375 4.84151C8.9375 7.28676 6.04908 9.625 5.49978 9.625Z" />
+                                </svg>
+                                <span>Sayaji</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="dog-card">
+
+                   <div class="my-dogs">
+                        <img src="images/dude.jpg" alt="">
+                    </div>
+
+                    <div class="info-row">
+
+                        <img src="images/dude.logo.jpeg" class="dog-logo">
+
+                        <div class="info-text">
+                            <div class="dog-name">Dude</div>
+                            <div class="dog-age">5 years old</div>
+
+                            <div class="dog-location">
+                                <svg viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M6.64579 4.81306C6.64579 4.17998 6.13281 3.66699 5.50019 3.66699C4.86711 3.66699 4.35413 4.17998 4.35413 4.81306C4.35413 5.44568 4.86711 5.95866 5.50019 5.95866C6.13281 5.95866 6.64579 5.44568 6.64579 4.81306Z" />
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M5.49978 9.625C4.95047 9.625 2.0625 7.28676 2.0625 4.84151C2.0625 2.92721 3.60117 1.375 5.49978 1.375C7.39838 1.375 8.9375 2.92721 8.9375 4.84151C8.9375 7.28676 6.04908 9.625 5.49978 9.625Z" />
+                                </svg>
+                                <span>BlueJay Aster</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dog-card">
+
+                      <div class="oreo">
+                        <img src="images/oreo.jpg" alt="">
+                    </div>
+
+                    <div class="info-row">
+
+                        <img src="images/oreo.jpeg" class="dog-logo">
+
+                        <div class="info-text">
+                            <div class="dog-name">Oreo</div>
+                            <div class="dog-age">4 years old</div>
+
+                            <div class="dog-location">
+                                <svg viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M6.64579 4.81306C6.64579 4.17998 6.13281 3.66699 5.50019 3.66699C4.86711 3.66699 4.35413 4.17998 4.35413 4.81306C4.35413 5.44568 4.86711 5.95866 5.50019 5.95866C6.13281 5.95866 6.64579 5.44568 6.64579 4.81306Z" />
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M5.49978 9.625C4.95047 9.625 2.0625 7.28676 2.0625 4.84151C2.0625 2.92721 3.60117 1.375 5.49978 1.375C7.39838 1.375 8.9375 2.92721 8.9375 4.84151C8.9375 7.28676 6.04908 9.625 5.49978 9.625Z" />
+                                </svg>
+                                <span>Nipania</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dog-card">
+
+                    <div class="dog-image">
+                        <img src="images/dog7.png" alt="">
+                    </div>
+
+                    <div class="info-row">
+
+                        <img src="images/logo7.jpg" class="dog-logo">
+
+                        <div class="info-text">
+                            <div class="dog-name">Murphy</div>
+                            <div class="dog-age">2 years old</div>
+
+                            <div class="dog-location">
+                                <svg viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M6.64579 4.81306C6.64579 4.17998 6.13281 3.66699 5.50019 3.66699C4.86711 3.66699 4.35413 4.17998 4.35413 4.81306C4.35413 5.44568 4.86711 5.95866 5.50019 5.95866C6.13281 5.95866 6.64579 5.44568 6.64579 4.81306Z" />
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M5.49978 9.625C4.95047 9.625 2.0625 7.28676 2.0625 4.84151C2.0625 2.92721 3.60117 1.375 5.49978 1.375C7.39838 1.375 8.9375 2.92721 8.9375 4.84151C8.9375 7.28676 6.04908 9.625 5.49978 9.625Z" />
+                                </svg>
+                                <span>Sukhliya</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dog-card">
+
+                    <div class="dog-image">
+                        <img src="images/dog8.png" alt="">
+                    </div>
+
+                    <div class="info-row">
+
+                        <img src="images/logo3.jpg" class="dog-logo">
+
+                        <div class="info-text">
+                            <div class="dog-name">Jet</div>
+                            <div class="dog-age">13 years old</div>
+
+                            <div class="dog-location">
+                                <svg viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M6.64579 4.81306C6.64579 4.17998 6.13281 3.66699 5.50019 3.66699C4.86711 3.66699 4.35413 4.17998 4.35413 4.81306C4.35413 5.44568 4.86711 5.95866 5.50019 5.95866C6.13281 5.95866 6.64579 5.44568 6.64579 4.81306Z" />
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M5.49978 9.625C4.95047 9.625 2.0625 7.28676 2.0625 4.84151C2.0625 2.92721 3.60117 1.375 5.49978 1.375C7.39838 1.375 8.9375 2.92721 8.9375 4.84151C8.9375 7.28676 6.04908 9.625 5.49978 9.625Z" />
+                                </svg>
+                                <span>Marimata</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dog-card">
+
+                    <div class="oreo">
+                        <img src="images/dog9.png" alt="">
+                    </div>
+
+                    <div class="info-row">
+
+                        <img src="images/logo5.jpg" class="dog-logo">
+
+                        <div class="info-text">
+                            <div class="dog-name">Kelly</div>
+                            <div class="dog-age">7 years old</div>
+
+                            <div class="dog-location">
+                                <svg viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M6.64579 4.81306C6.64579 4.17998 6.13281 3.66699 5.50019 3.66699C4.86711 3.66699 4.35413 4.17998 4.35413 4.81306C4.35413 5.44568 4.86711 5.95866 5.50019 5.95866C6.13281 5.95866 6.64579 5.44568 6.64579 4.81306Z" />
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M5.49978 9.625C4.95047 9.625 2.0625 7.28676 2.0625 4.84151C2.0625 2.92721 3.60117 1.375 5.49978 1.375C7.39838 1.375 8.9375 2.92721 8.9375 4.84151C8.9375 7.28676 6.04908 9.625 5.49978 9.625Z" />
+                                </svg>
+                                <span>Hira Nagar</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dog-card">
+
+                    <div class="dog-image">
+                        <img src="images/dog10.png" alt="">
+                    </div>
+
+                    <div class="info-row">
+
+                        <img src="images/logo1.jpg" class="dog-logo">
+
+                        <div class="info-text">
+                            <div class="dog-name">Vanilla</div>
+                            <div class="dog-age">5 years old</div>
+
+                            <div class="dog-location">
+                                <svg viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M6.64579 4.81306C6.64579 4.17998 6.13281 3.66699 5.50019 3.66699C4.86711 3.66699 4.35413 4.17998 4.35413 4.81306C4.35413 5.44568 4.86711 5.95866 5.50019 5.95866C6.13281 5.95866 6.64579 5.44568 6.64579 4.81306Z" />
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M5.49978 9.625C4.95047 9.625 2.0625 7.28676 2.0625 4.84151C2.0625 2.92721 3.60117 1.375 5.49978 1.375C7.39838 1.375 8.9375 2.92721 8.9375 4.84151C8.9375 7.28676 6.04908 9.625 5.49978 9.625Z" />
+                                </svg>
+                                <span>Bada Ganpati</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dog-card">
+
+                    <div class="dog-image">
+                        <img src="images/dog11.png" alt="">
+                    </div>
+
+                    <div class="info-row">
+
+                        <img src="images/logo6.jpg" class="dog-logo">
+
+                        <div class="info-text">
+                            <div class="dog-name">Choco</div>
+                            <div class="dog-age">1 years old</div>
+
+                            <div class="dog-location">
+                                <svg viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M6.64579 4.81306C6.64579 4.17998 6.13281 3.66699 5.50019 3.66699C4.86711 3.66699 4.35413 4.17998 4.35413 4.81306C4.35413 5.44568 4.86711 5.95866 5.50019 5.95866C6.13281 5.95866 6.64579 5.44568 6.64579 4.81306Z" />
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M5.49978 9.625C4.95047 9.625 2.0625 7.28676 2.0625 4.84151C2.0625 2.92721 3.60117 1.375 5.49978 1.375C7.39838 1.375 8.9375 2.92721 8.9375 4.84151C8.9375 7.28676 6.04908 9.625 5.49978 9.625Z" />
+                                </svg>
+                                <span>MR 10</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dog-card">
+
+                    <div class="dog-image">
+                        <img src="images/dog12.png" alt="">
+                    </div>
+
+                    <div class="info-row">
+
+                        <img src="images/logo5.jpg" class="dog-logo">
+
+                        <div class="info-text">
+                            <div class="dog-name">Trike Turbo</div>
+                            <div class="dog-age">3 years old</div>
+
+                            <div class="dog-location">
+                                <svg viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M6.64579 4.81306C6.64579 4.17998 6.13281 3.66699 5.50019 3.66699C4.86711 3.66699 4.35413 4.17998 4.35413 4.81306C4.35413 5.44568 4.86711 5.95866 5.50019 5.95866C6.13281 5.95866 6.64579 5.44568 6.64579 4.81306Z" />
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M5.49978 9.625C4.95047 9.625 2.0625 7.28676 2.0625 4.84151C2.0625 2.92721 3.60117 1.375 5.49978 1.375C7.39838 1.375 8.9375 2.92721 8.9375 4.84151C8.9375 7.28676 6.04908 9.625 5.49978 9.625Z" />
+                                </svg>
+                                <span>kalani Nagar</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dog-card">
+
+                    <div class="dog-image">
+                        <img src="images/dog13.png" alt="">
+                    </div>
+
+                    <div class="info-row">
+
+                        <img src="images/logo7.jpg" class="dog-logo">
+
+                        <div class="info-text">
+                            <div class="dog-name">Frisco</div>
+                            <div class="dog-age">8 years old</div>
+
+                            <div class="dog-location">
+                                <svg viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M6.64579 4.81306C6.64579 4.17998 6.13281 3.66699 5.50019 3.66699C4.86711 3.66699 4.35413 4.17998 4.35413 4.81306C4.35413 5.44568 4.86711 5.95866 5.50019 5.95866C6.13281 5.95866 6.64579 5.44568 6.64579 4.81306Z" />
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M5.49978 9.625C4.95047 9.625 2.0625 7.28676 2.0625 4.84151C2.0625 2.92721 3.60117 1.375 5.49978 1.375C7.39838 1.375 8.9375 2.92721 8.9375 4.84151C8.9375 7.28676 6.04908 9.625 5.49978 9.625Z" />
+                                </svg>
+                                <span>Dewas Naka</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dog-card">
+
+                    <div class="dog-image">
+                        <img src="images/dog14.png" alt="">
+                    </div>
+
+                    <div class="info-row">
+
+                        <img src="images/logo2.jpg" class="dog-logo">
+
+                        <div class="info-text">
+                            <div class="dog-name">Bruno</div>
+                            <div class="dog-age">6 years old</div>
+
+                            <div class="dog-location">
+                                <svg viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M6.64579 4.81306C6.64579 4.17998 6.13281 3.66699 5.50019 3.66699C4.86711 3.66699 4.35413 4.17998 4.35413 4.81306C4.35413 5.44568 4.86711 5.95866 5.50019 5.95866C6.13281 5.95866 6.64579 5.44568 6.64579 4.81306Z" />
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M5.49978 9.625C4.95047 9.625 2.0625 7.28676 2.0625 4.84151C2.0625 2.92721 3.60117 1.375 5.49978 1.375C7.39838 1.375 8.9375 2.92721 8.9375 4.84151C8.9375 7.28676 6.04908 9.625 5.49978 9.625Z" />
+                                </svg>
+                                <span>Silicon City</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dog-card">
+
+                    <div class="dog-image">
+                        <img src="images/dog15.png" alt="">
+                    </div>
+
+                    <div class="info-row">
+
+                        <img src="images/logo4.jpg" class="dog-logo">
+
+                        <div class="info-text">
+                            <div class="dog-name">Twinkle</div>
+                            <div class="dog-age">9 years old</div>
+
+                            <div class="dog-location">
+                                <svg viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M6.64579 4.81306C6.64579 4.17998 6.13281 3.66699 5.50019 3.66699C4.86711 3.66699 4.35413 4.17998 4.35413 4.81306C4.35413 5.44568 4.86711 5.95866 5.50019 5.95866C6.13281 5.95866 6.64579 5.44568 6.64579 4.81306Z" />
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M5.49978 9.625C4.95047 9.625 2.0625 7.28676 2.0625 4.84151C2.0625 2.92721 3.60117 1.375 5.49978 1.375C7.39838 1.375 8.9375 2.92721 8.9375 4.84151C8.9375 7.28676 6.04908 9.625 5.49978 9.625Z" />
+                                </svg>
+                                <span>Rajwada</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="dog-card">
+
+                    <div class="oreo">
+                        <img src="images/simba2.jpg" alt="">
+                    </div>
+
+                    <div class="info-row">
+
+                        <img src="images/romie.logo.jpeg" class="dog-logo">
+
+                        <div class="info-text">
+                            <div class="dog-name">Simba</div>
+                            <div class="dog-age">3 years old</div>
+
+                            <div class="dog-location">
+                                <svg viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M6.64579 4.81306C6.64579 4.17998 6.13281 3.66699 5.50019 3.66699C4.86711 3.66699 4.35413 4.17998 4.35413 4.81306C4.35413 5.44568 4.86711 5.95866 5.50019 5.95866C6.13281 5.95866 6.64579 5.44568 6.64579 4.81306Z" />
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M5.49978 9.625C4.95047 9.625 2.0625 7.28676 2.0625 4.84151C2.0625 2.92721 3.60117 1.375 5.49978 1.375C7.39838 1.375 8.9375 2.92721 8.9375 4.84151C8.9375 7.28676 6.04908 9.625 5.49978 9.625Z" />
+                                </svg>
+                                <span>Mandsaur</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="dog-card">
+
+                    <div class="dog-image">
+                        <img src="images/Romie.jpg" alt="">
+                    </div>
+
+                    <div class="info-row">
+
+                        <img src="images/simbal.jpeg" class="dog-logo">
+
+                        <div class="info-text">
+                            <div class="dog-name">Romie</div>
+                            <div class="dog-age">12 years old</div>
+
+                            <div class="dog-location">
+                                <svg viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M6.64579 4.81306C6.64579 4.17998 6.13281 3.66699 5.50019 3.66699C4.86711 3.66699 4.35413 4.17998 4.35413 4.81306C4.35413 5.44568 4.86711 5.95866 5.50019 5.95866C6.13281 5.95866 6.64579 5.44568 6.64579 4.81306Z" />
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M5.49978 9.625C4.95047 9.625 2.0625 7.28676 2.0625 4.84151C2.0625 2.92721 3.60117 1.375 5.49978 1.375C7.39838 1.375 8.9375 2.92721 8.9375 4.84151C8.9375 7.28676 6.04908 9.625 5.49978 9.625Z" />
+                                </svg>
+                                <span>Apollo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+
+                <div class="dog-card">
+
+                    <div class="dog-image">
+                        <img src="images/dog16.png" alt="">
+                    </div>
+
+                    <div class="info-row">
+
+                        <img src="images/logo6.jpg" class="dog-logo">
+
+                        <div class="info-text">
+                            <div class="dog-name">Stud</div>
+                            <div class="dog-age">6 years old</div>
+
+                            <div class="dog-location">
+                                <svg viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M6.64579 4.81306C6.64579 4.17998 6.13281 3.66699 5.50019 3.66699C4.86711 3.66699 4.35413 4.17998 4.35413 4.81306C4.35413 5.44568 4.86711 5.95866 5.50019 5.95866C6.13281 5.95866 6.64579 5.44568 6.64579 4.81306Z" />
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M5.49978 9.625C4.95047 9.625 2.0625 7.28676 2.0625 4.84151C2.0625 2.92721 3.60117 1.375 5.49978 1.375C7.39838 1.375 8.9375 2.92721 8.9375 4.84151C8.9375 7.28676 6.04908 9.625 5.49978 9.625Z" />
+                                </svg>
+                                <span>Phoneix Citadell</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="dog-card">
+
+                    <div class="my-dogs">
+                        <img src="images/suzie.avif" alt="">
+                    </div>
+
+                    <div class="info-row">
+
+                        <img src="images/suzie.logo.jpeg" class="dog-logo">
+
+                        <div class="info-text">
+                            <div class="dog-name">Suzie</div>
+                            <div class="dog-age">6 years old</div>
+
+                            <div class="dog-location">
+                                <svg viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M6.64579 4.81306C6.64579 4.17998 6.13281 3.66699 5.50019 3.66699C4.86711 3.66699 4.35413 4.17998 4.35413 4.81306C4.35413 5.44568 4.86711 5.95866 5.50019 5.95866C6.13281 5.95866 6.64579 5.44568 6.64579 4.81306Z" />
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M5.49978 9.625C4.95047 9.625 2.0625 7.28676 2.0625 4.84151C2.0625 2.92721 3.60117 1.375 5.49978 1.375C7.39838 1.375 8.9375 2.92721 8.9375 4.84151C8.9375 7.28676 6.04908 9.625 5.49978 9.625Z" />
+                                </svg>
+                                <span>Lig Square</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="dog-card">
+
+                    <div class="sapphire">
+                        <img src="images/sappphire.png" alt="">
+                    </div>
+
+                    <div class="info-row">
+
+                        <img src="images/sap.logo.jpeg" class="dog-logo">
+
+                        <div class="info-text">
+                            <div class="dog-name">Sapphire</div>
+                            <div class="dog-age">6 years old</div>
+
+                            <div class="dog-location">
+                                <svg viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M6.64579 4.81306C6.64579 4.17998 6.13281 3.66699 5.50019 3.66699C4.86711 3.66699 4.35413 4.17998 4.35413 4.81306C4.35413 5.44568 4.86711 5.95866 5.50019 5.95866C6.13281 5.95866 6.64579 5.44568 6.64579 4.81306Z" />
+                                    <path fill="none" stroke="#00CFFF" stroke-width="0.8"
+                                        d="M5.49978 9.625C4.95047 9.625 2.0625 7.28676 2.0625 4.84151C2.0625 2.92721 3.60117 1.375 5.49978 1.375C7.39838 1.375 8.9375 2.92721 8.9375 4.84151C8.9375 7.28676 6.04908 9.625 5.49978 9.625Z" />
+                                </svg>
+                                <span>Lotus</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <footer>
+        <div class="footer">
+            <a href="https://www.instagram.com/framesofaditya?igsh=dDFuM2Jjbnp1OTR0"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <p>Follow us on Instagram</p>
+        </div>
+    </footer>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

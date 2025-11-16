@@ -1,0 +1,718 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(250, 252, 255);
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
+        'Droid Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+/* ---------------- NAVBAR ---------------- */
+nav {
+    /* display: flex-end; */
+    background-color: rgb(78, 45, 105);
+    border-radius: 0 0 30px 30px;
+    height: 26vh;
+}
+
+.nav-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+}
+
+
+/* group of menu + button */
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: absolute;
+    right: 164px;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+.nav-items ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+}
+.nav-items ul :nth-child(1):hover{
+ color: #ffffff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+.nav-items ul :nth-child(2):hover{
+ color: #ffffff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+.nav-items ul :nth-child(3):hover{
+ color: #ffffff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+.nav-items button {
+    padding: 9px 28px;
+    border-radius: 52px;
+    border: none;
+    background: white;
+    color: rgb(78, 45, 105);
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+/* ---------------- CHOOSE SECTION ---------------- */
+.choose {
+
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 30px;
+    background: white;
+    margin: -65px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    width: 1200px;
+    max-width: 95%;
+}
+
+
+
+.head-dog {
+    /* display: flex; */
+    font-weight: 600;
+    font-size: 14px;
+    color: rgb(31, 52, 93);
+    margin-bottom: 10px;
+    margin-left: 18px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 100px; */
+
+    /* justify-content: center; */
+}
+
+.buttons select,
+.reset,
+.search {
+    border-radius: 20px;
+    font-size: 16px;
+    margin: 5px 12px;
+    /* padding: 15px; */
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.buttons select {
+    color: rgb(78, 45, 105);
+    font-weight: 500;
+    width: 220px;
+    background-color: #f3f5f9;
+    text-align: center;
+
+}
+
+.buttons .reset {
+    color: rgb(78, 45, 105);
+    background-color: white;
+    border: 1px solid rgb(78, 45, 105);
+    padding: 15px 35px;
+    height: 55px;
+
+
+}
+
+.buttons .search {
+    background: rgb(78, 45, 105);
+    /* border: 1px solid rgb(78, 45, 105); */
+    color: white;
+    padding: 18px 75px;
+    height: 55px;
+}
+
+.buttons .search:hover {
+    background-color: rgb(87, 55, 112);
+}
+
+/* ---------------- MAIN CONTENT ---------------- */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    /* border: 2px solid rgb(0, 255, 51); */
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* ---------------- FILTER BOX ---------------- */
+.mainbox {
+    display: flex;
+    gap: 20px;
+
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filterbox {
+    /* flex: 0 0 20%; */
+    flex-wrap: wrap;
+    /* border: 2px solid; */
+    background-color: white;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 30px;
+    width: 270px;
+    margin-right: 0px;
+    /* text-align: center; */
+    padding-left: 25px;
+}
+
+/*  */
+
+
+.head-txt {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(31, 52, 93);
+    margin-top: 15px;
+}
+
+select {
+    width: 90%;
+    border-radius: 20px;
+    height: 51px;
+    padding: 10px 15px;
+    font-size: 15px;
+    color: #1f345d;
+    background-color: #f3f5f9;
+    outline: none;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* AGE, LOCATION, DISTANCE, CHECKBOX STYLES */
+.age-range,
+.location,
+.distance-box {
+    margin-top: 15px;
+
+}
+
+.distance {
+    color: rgb(31, 52, 93, 0.5);
+    font-weight: 550;
+}
+
+.distance-select {
+    background-color: rgb(243, 245, 249, 0.5);
+}
+
+.location .current {
+    height: 50px;
+
+}
+
+
+
+
+.location input {
+    height: 50px;
+}
+
+.age-from input {
+    width: 50px;
+    height: 50px;
+}
+
+.age-container,
+.location {
+    display: flex;
+    align-items: center;
+    /* gap: 10px */
+}
+
+.age-from,
+.age-young {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    text-align: center;
+    /* justify-content: center; */
+}
+
+.age-from input,
+.age-young input,
+.location input {
+    /* flex: 1; */
+    border-radius: 20px 0 0 20px;
+    border: none;
+    outline: none;
+    background-color: rgb(243, 245, 249);
+    /* padding: 10px; */
+    height: 50px;
+}
+
+.age-young input {
+    width: 65%;
+}
+
+.location input {
+    width: 40%;
+}
+
+.from-yrs,
+.young-yrs,
+.current {
+    background-color: rgba(136, 146, 165, 0.25);
+    border-radius: 0 20px 20px 0;
+    padding: 10px 15px;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.current {
+    background: rgb(78, 45, 105);
+    color: white;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    appearance: none;
+    background-color: #e8ecf3;
+    height: 26px;
+    width: 26px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #19bc90;
+}
+
+input[type="checkbox"]::after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 12px;
+    color: #fff;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+input[type="checkbox"]:checked::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.check {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.check label {
+    cursor:pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgb(31, 52, 93);
+    font-size: 14px;
+    font-weight: 550;
+}
+
+/* ---------------- FILTER BUTTONS ---------------- */
+.filter-reset button,
+.filter-search button {
+    width: 90%;
+    height: 56px;
+    border-radius: 20px;
+    padding: 15px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.filter-reset button {
+    background: white;
+    color: rgb(78, 45, 105);
+    border: 1px solid rgb(78, 45, 105);
+}
+
+.filter-search button {
+    background: rgb(78, 45, 105);
+    border: 1px solid rgb(78, 45, 105);
+    color: white;
+}
+
+.filter-search button:hover {
+    background-color: rgb(87, 55, 112);
+}
+
+/* ---------------- PET CARDS ---------------- */
+.content {
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+
+
+}
+
+.dog-card {
+    width: 288px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 30px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.dog-image img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: .4s;
+    filter: brightness(.9);
+}
+
+.dog-image img:hover {
+    scale: 1.05;
+    filter: brightness(1);
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 4px;
+}
+
+.dog-logo {
+    height: 40px;
+    border-radius: 10px;
+}
+
+.info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.dog-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.dog-age {
+    font-size: 14px;
+    color: rgb(76, 92, 123);
+}
+
+.dog-location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: rgb(76, 92, 123);
+}
+
+.dog-location svg {
+    width: 15px;
+}
+
+
+/* ---------------- FOOTER ---------------- */
+footer .footer {
+    background: rgb(78, 45, 105);
+    border-radius: 55px 55px 0 0;
+    text-align: center;
+    color: white;
+    padding: 35px 0;
+    width: 100vw;
+    margin-top: 40px;
+}
+.footer a{
+    color: white;
+    cursor: pointer;
+}
+
+
+
+/* ---------- Mobile (max-width: 768px) ---------- */
+@media (max-width: 768px) {
+
+    nav {
+        height: 18vh;
+    }
+
+    .logo {
+        height: 55px;
+        top: 15px;
+    }
+
+    .nav-items {
+        right: 20px;
+        gap: 20px;
+    }
+
+    .nav-items ul {
+        gap: 20px;
+        font-size: 14px;
+    }
+
+    .nav-items button {
+        padding: 6px 18px;
+        font-size: 13px;
+    }
+
+    /* Choose Section */
+    .choose {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons select {
+        width: 100%;
+    }
+
+    .buttons .reset,
+    .buttons .search {
+        width: 100%;
+        padding: 14px;
+    }
+
+    /* Main Layout */
+    .mainbox {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filterbox {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+}
+
+/* ---------- Small Mobile (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+
+    .nav-items {
+        display: none; /* hide menu for small phones */
+    }
+
+   nav {
+        height: 20vh;   /* increase height */
+    }
+
+    .logo {
+        top: 18px;       /* adjust so it stays visible */
+        height: 60px;   /* slightly bigger but still fits */
+    }
+
+    .choose {
+        margin-top: -55px;   /* so choose section doesn’t overlap */
+    }
+
+    .buttons .search,
+    .buttons .reset,
+    .buttons select {
+        width: 100%;
+    }
+
+
+.nav-items.open {
+    display: flex;
+}
+
+
+    /* Cards: show 1 in row */
+       @media (max-width: 768px) {
+    .content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dog-card {
+        width: 100%;
+    }
+}
+
+    footer .footer {
+        border-radius: 30px 30px 0 0;
+        padding: 25px 0;
+    }
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 22px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+/* Show hamburger on mobile */
+@media (max-width: 480px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        background: rgb(78, 45, 105);
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        gap: 20px;
+        width: 150px;
+        z-index: 1000;
+    }
+
+    .nav-items.open {
+        display: flex;
+    }
+}
+
+/* ---------- FULLSCREEN MOBILE MENU ---------- */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgb(78, 45, 105);
+    color: white;
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+    z-index: 2000;
+}
+
+.mobile-menu.open {
+    left: 0;
+}
+
+.menu-header i {
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.menu-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.my-dogs img {
+    width: 100%;
+    height: 190px;
+    object-fit:cover;
+     object-position:0% 35%;
+    border-radius: 20px;
+    transition: .4s;
+    filter: brightness(.9);
+}
+
+.my-dogs img:hover {
+    scale: 1.05;
+    filter: brightness(1);
+}
+
+.oreo img {
+    width: 100%;
+    height: 190px;
+    object-fit:cover;
+     object-position:0% -1%;
+    border-radius: 20px;
+    transition: .4s;
+    filter: brightness(.9);
+}
+
+.oreo img:hover {
+    scale: 1.05;
+    filter: brightness(1);
+}
+.sapphire img {
+   width: 100%;
+    height: 190px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 20px;
+    background: #000; 
+    transition: .4s; 
+    filter: brightness(1);
+}
+
+.sapphire img:hover {
+    scale: 1.05;
+    filter: brightness(1);
+}
